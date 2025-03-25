@@ -88,50 +88,9 @@ This structure ensures that individual modules can be independently developed an
 - WebSocket library
 - Boost Libraries (including `boost::asio`)
 
-## Installation
 
-### 1. Clone the repository:
 
-```bash
-git clone https://github.com/automatesolutions/WebSocket_HFT.git
-cd Websocket_HFT
-```
-### 2. Install dependencies:
--Install Boost Library
- Boost is required for this project. If Boost is not already installed, follow these steps:
-
-1. Install Boost using your package manager:
-
-Ubuntu/Debian:
-```bash
-sudo apt-get install libboost-all-dev
-```
-macOS (with Homebrew):
-```bash
-brew install boost
-```
-Windows: Download and install Boost from the Boost website.
-[Link here](https://www.boost.org/)
-
-2. Install OpenSSL
-Ubuntu/Debian:
-```bash
-sudo apt-get install libssl-dev
-```
-macOS (with Homebrew):
-```bash
-brew install openssl
-```
-Windows: Download and install OpenSSL from the OpenSSL website.
-[Link here](https://www.openssl.org/)
-
-3. Install Other Dependencies
-You may use a package manager like vcpkg to install libraries:
-```bash
-./vcpkg install nlohmann-json websocketp
-```
-
-4. Build the project with CMake:
+# Build the project with CMake:
 a) Create a build directory:
 ```bash
 mkdir build
@@ -148,7 +107,7 @@ cmake --build . --config debug
 ```
 This will generate the executable file deribit_trader.exe
 
-4. Run the application:
+# Run the application:
 ```bash
 ./deribit_trader.exe
 ```
@@ -193,39 +152,17 @@ Select option 5 to view the current positions in your account.
 
 Select option 6 to exit the application.
 
-## Optimizations
-- Memory Management:
-Uses std::make_unique for efficient memory management, preventing memory leaks and reducing overhead.
-
-- Asynchronous Network Communication:
-Network requests (placing, canceling, and modifying orders) are handled asynchronously to avoid blocking the main thread, improving responsiveness.
-
--Thread Management:
-The use of std::async allows for concurrent execution of I/O operations, enhancing user experience by not blocking the main application thread.
-
--SIMD/Parallelization:
-Future improvements can include SIMD (Single Instruction, Multiple Data) optimizations for parallelizing large-scale data processing tasks, such as order book analysis.
-
-## Demo
-Watch this demo video to see the application in action:
-[Crypto Trading System using C++](https://vimeo.com/1041769096)
 
 
 
 
-## Future Improvements
-SIMD optimization for large-scale data processing and order book analysis.
-Integration with additional exchanges and features.
-Advanced error handling and retries for network communication.
 
 
-## Contributing
 
-Contributions are welcome! If you'd like to improve this project, fix bugs, or add new features, feel free to fork the repository, make your changes, and submit a pull request. Your efforts will help make this trading application even better!
 
-If you found this project helpful or learned something new from it, you can support the development with just a cup of coffee ☕. It's always appreciated and keeps the ideas flowing!
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support-blue?style=for-the-badge&logo=coffee&logoColor=white)](https://buymeacoffee.com/jonelpericon)
+
+
 
 
 
